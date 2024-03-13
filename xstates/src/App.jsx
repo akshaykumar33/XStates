@@ -50,15 +50,21 @@ function App() {
 
   const handleSelectChange = (e) => {
     const { name, value } = e.target;
+    if (name === 'country') {
+      setCountry(value);
+      setState('');
+      setCity('')
+    }
      if (name === 'city') setCity(value);
-    if (name === 'country') setCountry(value);
-    if (name === 'state') setState(value);
+    
+    if (name === 'state'){ setState(value); setCity('')}
   };
   
 
   return (
     <>
       <div className="card">
+        <h1>Select Location</h1>
       <select value={country} name='country' onChange={handleSelectChange}>
   <option value="">Select a Country</option>
   {countries.map((option) => (
@@ -80,11 +86,11 @@ function App() {
 
       </div>
       {(city && state && country) && (
-      <>
+      <span>
       <span>You selected </span>
       <span className='country'>{country},</span>
       <span className='cityandstate'>{state},{city}</span>
-      </>
+      </span>
       )}
     </>
   );
