@@ -58,6 +58,7 @@ function App() {
      if (name === 'city') setCity(value);
     
     if (name === 'state'){ setState(value); setCity('')}
+    
   };
   
 
@@ -86,12 +87,11 @@ function App() {
 
       </div>
       {(city && state && country) && (
-        <span className='cityandstate'>You selected {country},{state},{city}</span>
-      // <span>
-      // <span>You selected </span>
-      // <span className='country'>{country},</span>
-      // <span className='cityandstate'>{state},{city}</span>
-      // </span>
+      <span>
+      <span>You selected </span>
+      <span className='country'>{city}, </span>
+      <span className='cityandstate'>{state}, {country}</span>
+      </span>
       )}
     </>
   );
