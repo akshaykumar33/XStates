@@ -86,11 +86,12 @@ function App() {
 
       </div>
       {(city && state && country) && (
-      <span>
-      <span>You selected </span>
-      <span className='country'>{country},</span>
-      <span className='cityandstate'>{state},{city}</span>
-      </span>
+        <span className='cityandstate'>You selected {country},{state},{city}</span>
+      // <span>
+      // <span>You selected </span>
+      // <span className='country'>{country},</span>
+      // <span className='cityandstate'>{state},{city}</span>
+      // </span>
       )}
     </>
   );
