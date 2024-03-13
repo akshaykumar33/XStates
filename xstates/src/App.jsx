@@ -89,8 +89,8 @@ function App() {
       {(city && state && country) && (
       <span>
       <span>You selected </span>
-      <span className='country'>{city}, </span>
-      <span className='cityandstate'>{state}, {country}</span>
+      <span className='city'>{city}, </span>
+      <span className='stateandcountry'>{state}, {country}</span>
       </span>
       )}
     </>

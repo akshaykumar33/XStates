@@ -24,11 +24,11 @@ span{
   font-size: 1em;
   font-weight: bold;
 }
-.country{
+.city{
 font-size:1.5em;
 font-weight: bolder;
 }
-.cityandstate{
+.stateandcountry{
   font-size: 1.1em;
   font-weight: bold;
 color:grey;
